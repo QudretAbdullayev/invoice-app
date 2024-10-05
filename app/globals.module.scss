@@ -1,0 +1,13 @@
+@import '../app/variables.scss';
+
+.layout{
+    background-color: $color11;
+}
+.layoutDark{
+    background-color: $color12;
+}
+@media (min-width: $desktop-size) {
+    .layout{
+        display: flex;
+    }
+}

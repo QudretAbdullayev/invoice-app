@@ -1,0 +1,50 @@
+@import '../../app/variables.scss';
+@import '../../app/mixin.scss';
+
+.nothing{
+    background-color: $color11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        margin: 102px 0 42px 0;
+        width: 193.07px;
+        object-fit: cover;
+    }
+    .title{
+        color: $color08;
+        @include font(24px, 700, 22.08px, -0.75px, left);
+    }
+    .description{
+        color: $color06;
+        @include font(13px, 500, 15px, -0.10000000149011612px, center);
+        margin: 23px 0 50px 0;
+    }
+}
+.nothingDark{
+    background-color: $color12;
+    .title{
+        color: $color13;
+    }
+    .description{
+        color: $color05;
+    }
+}
+
+@media (min-width:$tablet-size) {
+    .nothing{
+        img{
+            margin: 209px 0 66px 0;
+            width: 241.34px;
+        }
+    }
+}
+
+@media (min-width:$desktop-size) {
+    .nothing{
+        img{
+            margin: 140.01px 0 66.54px 0;
+            width: 240.97px;
+        }
+    }
+}

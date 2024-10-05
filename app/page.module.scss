@@ -1,0 +1,7 @@
+@import '../app/variables.scss';
+
+@media (min-width: $desktop-size) {
+    .page{
+        width: calc(100% - 103px);
+    }
+}

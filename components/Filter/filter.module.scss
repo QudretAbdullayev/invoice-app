@@ -1,0 +1,182 @@
+@import '../../app/variables.scss';
+@import '../../app/mixin.scss';
+
+.filter{
+    background-color: $color11;
+    width: 100%;
+    padding: 32px 0;
+    .container{
+        width: $mobile;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            h4{
+                @include font(24px, 700, 22.08px, -0.75px, left);
+                color: $color08;
+                padding-bottom: 3px;
+            }
+            span{
+                display: flex;
+                gap: 3px;
+                h6{
+                @include font(14px, 500, 15px, -0.1px, left);
+                color: $color06;
+                }
+                :first-child {
+                display: none;
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            gap: 18.54px;
+            .filterButton{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                span{
+                    display: flex;
+                    gap: 4px;
+                    p{
+                        @include font(15px, 700, 15px, -0.25px, right);
+                    }
+                    :last-child{
+                        display: none;
+                    }
+                }
+                color: $color08;
+                img{
+                    width: 8.46px;
+                    object-fit: cover;
+                }
+            }
+            .newButton{
+                cursor: pointer;
+                background-color: $color01;
+                color: $color13;
+                border-radius: 24px;
+                padding: 6px 15px 6px 6px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                span{
+                    display: flex;
+                    gap: 4px;
+                    p{
+                        @include font(15px, 700, 15px, -0.25px, left);
+                    }
+                    :last-child{
+                        display: none;
+                    }
+                }
+                div{
+                    color: $color01;
+                    background-color: $color13;
+                    @include font(15px, 700, 15px, -0.25px, left);
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+.filterDark{
+    background-color: $color12;
+    .container{
+        .title{
+            h4{
+                color: $color13;
+            }
+            span{
+                h6{
+                color: $color13;
+                }
+            }
+        }
+        .buttons{
+            .filterButton{
+                color: $color13;
+            }
+            .newButton{
+                background-color: $color01;
+                color: $color13;
+                div{
+                    color: $color01;
+                    background-color: $color13;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$tablet-size) {
+    .filter{
+        padding: 61px 0 55px 0;
+        .container{
+            width: $tablet;
+            .title{
+                h4{
+                    @include font(36px, 700, 33.12px, -1.125px, left);
+                    padding-bottom: 6px;
+                }
+                span{
+                    gap: 4px;
+                    h6{
+                    @include font(13px, 500, 15px, -0.1px, left);
+                    }
+                    :first-child {
+                    display: block;
+                    }
+                }
+            }
+            .buttons{
+                gap: 40.54px;
+                .filterButton{
+                    gap: 14px;
+                    span{
+                        :last-child{
+                            display: block;
+                        }
+                    }
+                }
+                .newButton{
+                    padding: 8px 17px 8px 8px;
+                    gap: 16px;
+                    span{
+                        :last-child{
+                            display: block;
+                        }
+                    }
+                    div{
+                        color: $color01;
+                        background-color: $color13;
+                        @include font(18px, 700, null, -0.25px, left);
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$desktop-size) {
+    .filter{
+        padding: 77px 0 64px 0;
+        .container{
+            width: $desktop;
+        }
+    }
+}
