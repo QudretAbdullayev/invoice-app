@@ -1,7 +1,15 @@
 @import '../app/variables.scss';
+@media (min-width:$tablet-size) {
+    .page{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+    }
+}
 
 @media (min-width: $desktop-size) {
     .page{
+        height: auto;
         width: calc(100% - 103px);
     }
 }

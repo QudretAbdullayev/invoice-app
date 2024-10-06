@@ -2,11 +2,12 @@
 import styles from './filter.module.scss';
 import Image from 'next/image'
 import arrowBottom from '../../assets/svg/arrow-bottom.svg'
-import React from 'react';
+import { useLightDarkStore } from '../../app/store';
 
 const Filter = () => {
+  const lightDarkNew = useLightDarkStore(state => state.lightDark)
   return (
-    <section className={`${styles.filter}` `${styles.filterDark}`}>
+    <section className={`${lightDarkNew ? `${styles.filter}` : `${styles.filter} ${styles.filterDark}`}`}>
       <div className={styles.container}>
         <div className={styles.title}>
           <h4>Invoices</h4>

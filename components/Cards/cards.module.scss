@@ -1,0 +1,32 @@
+@import '../../app/variables.scss';
+@import '../../app/mixin.scss';
+
+.cards{
+    width: 100%;
+    background-color: $color11;
+    .container{
+        width: $mobile;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+.cardsDark{
+    background-color: $color12;
+}
+@media (min-width: $tablet-size) {
+    .cards{
+        flex-grow: 2;
+        .container{
+            width: $tablet;
+        }
+    }
+}
+@media (min-width: $desktop-size) {
+    .cards{
+        .container{
+            width: $desktop;
+        }
+    }
+}

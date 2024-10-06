@@ -8,7 +8,8 @@
     align-items: center;
     img{
         margin: 102px 0 42px 0;
-        width: 193.07px;
+        height: 160px;
+        width: auto;
         object-fit: cover;
     }
     .title{
@@ -33,9 +34,13 @@
 
 @media (min-width:$tablet-size) {
     .nothing{
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         img{
-            margin: 209px 0 66px 0;
-            width: 241.34px;
+            margin: 0 0 60px 0;
+            height: 200px;
         }
     }
 }
@@ -43,8 +48,7 @@
 @media (min-width:$desktop-size) {
     .nothing{
         img{
-            margin: 140.01px 0 66.54px 0;
-            width: 240.97px;
+            height: 199.46px;
         }
     }
 }

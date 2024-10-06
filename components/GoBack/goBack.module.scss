@@ -1,0 +1,39 @@
+@import '../../app/mixin.scss';
+@import '../../app/variables.scss';
+.goBack{
+    background-color: $color11;
+    width: 100%;
+    .container{
+        margin: 0 auto;
+        padding: 33px 0 31px 0;
+        width: $mobile;
+        color: $color08;
+        display: flex;
+        align-items: center;
+        gap: 23.66px;
+        @include font(15px, 700, 15px, -0.25px, left);
+    }
+}
+.goBackDark{
+    background-color: $color12;
+    .container{
+        color: $color13;
+    }
+}
+
+@media (min-width: $tablet-size) {
+    .goBack{
+        .container{
+            padding: 49px 0 31px 0;
+            width: $tablet;
+        }
+    }
+}
+@media (min-width: $desktop-size) {
+    .goBack{
+        .container{
+            padding: 65px 0 31px 0;
+            width: $desktop;
+        }
+    }
+}

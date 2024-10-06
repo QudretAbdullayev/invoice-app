@@ -1,13 +1,16 @@
 @import '../app/variables.scss';
 
-.layout{
-    background-color: $color11;
-}
-.layoutDark{
-    background-color: $color12;
-}
-@media (min-width: $desktop-size) {
+@media (min-width: $tablet-size) {
     .layout{
         display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media (min-width: $desktop-size) {
+    .layout{
+        flex-direction: row;
+        height: 100%;
     }
 }

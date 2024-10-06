@@ -7,56 +7,55 @@ import moon from '../../assets/svg/Moon.svg'
 import sun from '../../assets/svg/Sun.svg'
 import profile from '../../assets/svg/Profile.png'
 import Image from 'next/image'
-
+import {useLightDarkStore} from '../../app/store'
 const Header = () => {
-  const [lightDark, setLightDark] = React.useState('')
-  if (localStorage.getItem("lightDark") === null) {
-    localStorage.setItem("lightDark", 'light')
-  }
+  const lightDarkNew = useLightDarkStore(state => state.lightDark)
+  const lightDarkHandle = useLightDarkStore(state => state.isLightDark)
   const onLightDark = (e) => {
     e.preventDefault()
-    if(lightDark==='light'){
-        setLightDark('dark')
-        localStorage.setItem("lightDark", 'dark')
+    lightDarkHandle(lightDarkNew)
+    if(lightDarkNew){
+        localStorage.setItem("lightDark", false)
     }else{
-        setLightDark('light')
-        localStorage.setItem("lightDark", 'light')
+        localStorage.setItem("lightDark", true)
     }
   }
   return (
-    <header className={styles.header} >
-        <div className={styles.logo}>
-            <Image
-                src={pacman}
-                alt="pacman"
-            />
-            <div className={styles.logoBackground1}>
-                <div className={styles.logoBackground2}>
+    <header className={`${lightDarkNew ? `${styles.header}` : `${styles.header} ${styles.headerDark}`}`}>
+        <nav className={styles.navbar}>
+            <div className={styles.logo}>
+                <Image
+                    src={pacman}
+                    alt="pacman"
+                />
+                <div className={styles.logoBackground1}>
+                    <div className={styles.logoBackground2}>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className={styles.profileSettings}>
-            <div className={`${lightDark==='dark' ? `${styles.darkMode}` : `${styles.lightMode}`}`} onClick={(e)=>{onLightDark(e)}}>
-                {lightDark==="dark" 
-                ? 
-                <Image
-                    src={moon}
-                    alt="moon"
-                />
-                :
-                <Image
-                    src={sun}
-                    alt="sun"
-                />
-                }
+            <div className={styles.profileSettings}>
+                <div className={`${lightDarkNew ? `${styles.lightMode}` : `${styles.darkMode}`}`} onClick={(e)=>{onLightDark(e)}}>
+                    {lightDarkNew===false 
+                    ? 
+                    <Image
+                        src={moon}
+                        alt="moon"
+                    />
+                    :
+                    <Image
+                        src={sun}
+                        alt="sun"
+                    />
+                    }
+                </div>
+                <div className={styles.profileLogo}>
+                    <Image
+                        src={profile}
+                        alt="profile"
+                    />
+                </div>
             </div>
-            <div className={styles.profileLogo}>
-                <Image
-                    src={profile}
-                    alt="profile"
-                />
-            </div>
-        </div>
+        </nav>
     </header>
   )
 }

@@ -1,9 +1,13 @@
+'use client'
+
 import styles from './nothing.module.scss'
 import email from '../../assets/svg/Email campaign_Flatline 2.svg'
 import Image from 'next/image'
+import { useLightDarkStore } from '../../app/store'
 const Nothing = () => {
+  const lightDarkNew = useLightDarkStore(state => state.lightDark)
   return (
-    <section className={`${styles.nothing} ${styles.nothingDark}`}>
+    <section className={`${lightDarkNew ? `${styles.nothing}` : `${styles.nothing} ${styles.nothingDark}`}`}>
         <Image
         src={email}
         alt={email}
