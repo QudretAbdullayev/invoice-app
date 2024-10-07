@@ -1,0 +1,15 @@
+@import '../../../app/mixin.scss';
+@import '../../../app/variables.scss';
+
+.detail{
+    width: 100%;
+    background-color: $color11;
+    .container{
+        width: $mobile;
+        margin: 0 auto;
+        padding: 25px 24px 24px 24px;
+    }
+}
+.detailDark{
+    background-color: $color12;
+}

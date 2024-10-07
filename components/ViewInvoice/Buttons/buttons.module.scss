@@ -1,0 +1,45 @@
+@import '../../../app/mixin.scss';
+@import '../../../app/variables.scss';
+
+.buttons{
+    background-color: $color13;
+    width: 100%;
+    border: none;
+    .container{
+        width: $mobile;
+        padding: 21px 0 22px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        button{
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color09;
+            border: none;
+            color: $color13;
+            border-radius: 24px;
+            @include font(15px, 700, 15px, -0.25px, center);
+            flex-grow: 1;
+        }
+        :first-child{
+            background-color: $color15;
+            color: $color07;
+        }
+        :last-child{
+            background-color: $color01;
+        }
+    }
+}
+
+.buttonsDark{
+    background-color: $color03;
+    .container{
+        :first-child{
+            color: $color05;
+            background-color: $color04;
+        }
+    }
+}

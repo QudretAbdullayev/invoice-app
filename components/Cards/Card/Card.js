@@ -17,7 +17,11 @@ const Card = ({id,name,date,money,paid}) => {
         </div>
         <div className={styles.cardFooter}>
             <h4>£ {money}</h4>
-            <button className={`${styles[paid.toLowerCase()]}`}><img src="" alt="" /><p>{paid}</p><div></div></button>
+            <button className={`${styles[paid.toLowerCase()]}`}>
+              <span className={styles.circle}></span>
+              <p>{paid}</p>
+              <div></div>
+            </button>
             <Image
             src={arrow}
             alt={'arrow'}

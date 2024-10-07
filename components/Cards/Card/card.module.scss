@@ -61,13 +61,18 @@
                 border-radius: 6px;
                 border: none;
             }
+            .circle{
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+            }
             p{
                 background-color: transparent;
                 @include font(15px, 700, 15px, -0.25px, left);
             }
         }
         .paid{
-            div{
+            div,.circle{
                 background-color: $colorPaid;
             }
             p{
@@ -75,7 +80,7 @@
             }
         }
         .pending{
-            div{
+            div,.circle{
                 background-color: $colorPending;
             }
             p{
@@ -83,7 +88,7 @@
             }
         }
         .draft{
-            div{
+            div,.circle{
                 background-color: $dark-background;
             }
             p{

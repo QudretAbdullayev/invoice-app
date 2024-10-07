@@ -1,0 +1,78 @@
+@import '../../../app/mixin.scss';
+@import '../../../app/variables.scss';
+
+.status{
+    background-color: $color11;
+    width: 100%;
+    padding: 16px 0;
+    .container{
+        height: 91px;
+        border-radius: 8px;
+        padding: 24px 24px 27px 24px;
+        background-color: $color13;
+        width: $mobile;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            @include font(13px, 500, 15px, -0.1px, right);
+            color: $color14;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 8px;
+            border-radius: 6px;
+            width: 104px;
+            height: 40px;
+            div{
+                position: absolute;
+                border-radius: 6px;
+                opacity: 5.71%;
+            }
+            p{
+                @include font(15px, 700, 15px, -0.25px, center);
+            }
+            .circle{
+                border-radius: 50%;
+                height: 8px;
+                width: 8px;
+            }
+        }
+        .paid{
+            div,.circle{
+                background-color: $colorPaid;
+            }
+            p{
+                color: $colorPaid;
+            }
+        }
+        .pending{
+            div,.circle{
+                background-color: $colorPending;
+            }
+            p{
+                color: $colorPending;
+            }
+        }
+        .draft{
+            div,.circle{
+                background-color: $dark-background;
+            }
+            p{
+                color: $dark-background;
+            }
+        }
+    }
+}
+.statusDark{
+    background-color: $color12;
+    .container{
+        p{
+            color: $color05;
+        }
+    }
+}
