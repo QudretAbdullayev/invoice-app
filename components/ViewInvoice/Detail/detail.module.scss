@@ -5,9 +5,129 @@
     width: 100%;
     background-color: $color11;
     .container{
+        background-color: $color13;
         width: $mobile;
         margin: 0 auto;
         padding: 25px 24px 24px 24px;
+        border: none;
+        border-radius: 8px;
+        .description{
+            .title{
+                span{
+                    @include font(15px, 700, 15px, -0.25px, left);
+                    display: flex;
+                    color: $color08;
+                    p{
+                        @include font(15px, 700, 15px, -0.25px, left);
+                        color: $color07;
+                    }
+                }
+                p{
+                    color: $color07;
+                    @include font(13px, 500, 15px, -0.1px, left);
+                }
+            }
+            .firstAdress{
+                padding: 30px 0 31px 0;
+                p{
+                    color: $color07;
+                    @include font(13px, 500, 15px, -0.1px, left);
+                }
+            }
+        }
+        .detailArea{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            padding-bottom: 38px;
+            .date{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .invoice, .payment{
+                    p{
+                        color: $color07;
+                        @include font(13px, 500, 15px, -0.1px, left);
+                        padding-bottom: 13px;
+                    }
+                    h6{
+                        color: $color08;
+                        @include font(15px, 700, 20px, -0.25px, left);
+                    }
+                }
+            }
+            .billTo{
+                p{
+                    color: $color07;
+                    @include font(13px, 500, 15px, -0.1px, left);
+                }
+                h6{
+                    color: $color08;
+                    @include font(15px, 700, 20px, -0.25px, left);
+                    padding: 13px 0 7px 0;
+                }
+
+            }
+            .sentTo{
+                p{
+                    color: $color07;
+                    @include font(13px, 500, 15px, -0.1px, left);
+                    padding-bottom: 13px;
+                }
+                h6{
+                    color: $color08;
+                    @include font(15px, 700, 20px, -0.25px, left);
+                }
+            }
+        }
+        .pay{
+            .items{
+                padding: 25px 24px 23px 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                border: none;
+                border-radius: 8px 8px 0px 0;
+                background-color: $color15;
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .service{
+                        .serviceName{
+                            color: $color08;
+                            @include font(15px, 700, 15px, -0.25px, left);
+                            margin-bottom: 8px;
+                        }
+                        .serviceAmount{
+                            color: $color07;
+                            @include font(15px, 500, 15px, -0.25px, left);
+                        }
+                    }
+                    .price{
+                        color: $color08;
+                        @include font(15px, 700, 15px, -0.25px, right);
+                    }
+                }
+            }
+            .total{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 26px 24px 22px 24px;
+                background-color: $dark-background;
+                border: none;
+                border-radius: 0 0 8px 8px;
+                .title{
+                    @include font(13px, 500, 18px, -0.1px, right);
+                    color: $color13;
+                }
+                .totalPrice{
+                    @include font(24px, 700, 32px, -0.5px, right);
+                    color: $color13;
+                }
+            }
+        }
     }
 }
 .detailDark{

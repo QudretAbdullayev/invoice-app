@@ -5,6 +5,7 @@ import Cards from "@/components/Cards/Cards";
 import GoBack from "@/components/GoBack/GoBack";
 import Status from "@/components/ViewInvoice/Status/Status";
 import Buttons from "@/components/ViewInvoice/Buttons/Buttons";
+import Detail from "@/components/ViewInvoice/Detail/Detail";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <GoBack/>
       <Status/>
       <Buttons/>
+      <Detail/>
       {/* <Filter/>
       <Nothing/> */}
       {/* <Cards/> */}
