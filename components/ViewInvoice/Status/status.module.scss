@@ -71,8 +71,25 @@
 .statusDark{
     background-color: $color12;
     .container{
+        background-color: $color03;
         p{
             color: $color05;
+        }
+    }
+}
+@media (min-width:$tablet-size) {
+    .status{
+        order: 2;
+        width: 50%;
+        padding: 16px 0;
+        .container{
+            height: 88px;
+            border-radius: 8px 0 0 8px;
+            padding: 24px 24px 24px 32px;
+            width: calc($desktop / 2);
+            margin: 0 0 0 auto;
+            justify-content: initial;
+            gap: 20px;
         }
     }
 }

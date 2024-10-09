@@ -1,8 +1,11 @@
+'use client'
 import React from 'react'
 import styles from './detail.module.scss'
+import { useLightDarkStore } from '../../../app/store'
 const Detail = () => {
+  const lightDarkNew = useLightDarkStore(state => state.lightDark)
   return (
-    <section className={styles.detail}>
+    <section className={`${lightDarkNew ? `${styles.detail}` : `${styles.detail} ${styles.detailDark}`}`}>
       <div className={styles.container}>
         <div className={styles.description}>
           <div className={styles.title}>
@@ -42,23 +45,37 @@ const Detail = () => {
         </div>
         <div className={styles.pay}>
           <div className={styles.items}>
+            <div className={styles.itemTitle}>
+              <p>Item Name</p>
+              <p>QTY.</p>
+              <p>Price</p>
+              <p>Total</p>
+            </div>
             <div className={styles.item}>
               <div className={styles.service}>
                 <h6 className={styles.serviceName}>Banner Design</h6>
-                <p className={styles.serviceAmount}>1 x £ 156.00</p>
+                <div className={styles.serviceAmount}>
+                  <p>1</p>
+                  <p> x </p>
+                  <p>£ 156.00</p>
+                </div>
               </div>
               <h6 className={styles.price}>£ 156.00</h6>
             </div>
             <div className={styles.item}>
               <div className={styles.service}>
                 <h6 className={styles.serviceName}>Email Design</h6>
-                <p className={styles.serviceAmount}>1 x £ 200.00</p>
+                <div className={styles.serviceAmount}>
+                  <p>1</p>
+                  <p> x </p>
+                  <p>£ 200.00</p>
+                </div>
               </div>
               <h6 className={styles.price}>£ 400.00</h6>
             </div>
           </div>
           <div className={styles.total}>
-            <p className={styles.title}>Grand Total</p>
+            <p className={styles.title}>Amount Due</p>
             <h6 className={styles.totalPrice}>£ 556.00</h6>
           </div>
         </div>

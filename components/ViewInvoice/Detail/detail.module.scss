@@ -89,6 +89,9 @@
                 border: none;
                 border-radius: 8px 8px 0px 0;
                 background-color: $color15;
+                .itemTitle{
+                    display: none;
+                }
                 .item{
                     display: flex;
                     justify-content: space-between;
@@ -100,6 +103,10 @@
                             margin-bottom: 8px;
                         }
                         .serviceAmount{
+                            display: flex;
+                            gap: 4px;
+                        }
+                        .serviceAmount p{
                             color: $color07;
                             @include font(15px, 500, 15px, -0.25px, left);
                         }
@@ -132,4 +139,177 @@
 }
 .detailDark{
     background-color: $color12;
+    .container{
+        background-color: $color03;
+        .description{
+            .title{
+                span{
+                    color: $color13;
+                    p{
+                        color: $color07;
+                    }
+                }
+                p{
+                    color: $color05;
+                }
+            }
+            .firstAdress{
+                p{
+                    color: $color05;
+                }
+            }
+        }
+        .detailArea{
+            .date{
+                .invoice, .payment{
+                    p{
+                        color: $color05;
+                    }
+                    h6{
+                        color: $color13;
+                    }
+                }
+            }
+            .billTo{
+                p{
+                    color: $color05;
+                }
+                h6{
+                    color: $color13;
+                }
+
+            }
+            .sentTo{
+                p{
+                    color: $color05;
+                }
+                h6{
+                    color: $color13;
+                }
+            }
+        }
+        .pay{
+            .items{
+                background-color: $color04;
+                .item{
+                    .service{
+                        .serviceName{
+                            color: $color13;
+                        }
+                        .serviceAmount p{
+                            color: $color05;
+                        }
+                    }
+                    .price{
+                        color: $color13;
+                    }
+                }
+            }
+            .total{
+                background-color: $color08;
+            }
+        }
+    }
+}
+@media (min-width:$tablet-size) {
+    .detail{
+        order: 4;
+        .container{
+            width: $tablet;
+            padding: 33px 32px 32px 32px;
+            .description{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-bottom: 21px;
+                .title{
+                    span{
+                        @include font(15px, 700, 24px, -0.25px, left);
+                        padding-bottom: 7px;
+                        p{
+                            @include font(15px, 700, 24px, -0.25px, left);
+                        }
+                    }
+                    p{
+                        @include font(13px, 500, 15px, -0.1px, left);
+                    }
+                }
+                .firstAdress{
+                    padding: 0;
+                    p{
+                        @include font(13px, 500, 18px, -0.1px, left);
+                    }
+                }
+            }
+            .detailArea{
+                grid-template-columns: 7fr 7fr 7fr 1fr; 
+                padding-bottom: 47px;
+            }
+            .pay{
+                .items{
+                    padding: 33px 32px 39px 32px;
+                    gap: 32px;
+                    .itemTitle{
+                        display: grid;
+                        grid-template-columns: 8fr 2fr 4fr 4fr;
+                        p{
+                            color: $color07;
+                            @include font(13px,500,18px,-0.1px,left)
+                        }
+                        :nth-child(2){
+                            text-align: center;
+                        }
+                        :nth-child(3){
+                            text-align: right;
+                        }
+                        :last-child{
+                            text-align: right;
+                        }
+                    }
+                    .item{
+                        display: grid;
+                        grid-template-columns: 14fr 4fr;
+                        .service{
+                            display: grid;
+                            grid-template-columns: 8fr 6fr;
+                            .serviceName{
+                                margin-bottom: 0px;
+                            }
+                            .serviceAmount{
+                                display: grid;
+                                grid-template-columns: 2fr 4fr;
+                                :first-child{
+                                    text-align: center;
+                                }
+                                :nth-child(2){
+                                    display: none;
+                                }
+                                :last-child{
+                                    text-align: right;
+                                }
+                            }
+                            .serviceAmount p{
+                                @include font(15px, 700, 15px, -0.25px, left);
+                            }
+                        }
+                        .price{
+                            @include font(15px, 700, 15px, -0.25px, right);
+                        }
+                    }
+                }
+                .total{
+                    padding: 27px 32px 21px 32px;
+                }
+            }
+        }
+    }
+}
+@media (min-width:$desktop-size) {
+    .detail{
+        .container{
+            width: $desktop;
+            padding: 49px 48px 48px 48px;
+        }
+    }
 }

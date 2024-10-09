@@ -10,14 +10,16 @@ import Detail from "@/components/ViewInvoice/Detail/Detail";
 export default function Home() {
   return (
     <>
-    <main className={styles.page}>
+    {/* <main className={styles.page}>
+      <Filter/>
+      <Nothing/>
+      <Cards/>
+    </main> */}
+    <main className={styles.editPage}>
       <GoBack/>
       <Status/>
       <Buttons/>
       <Detail/>
-      {/* <Filter/>
-      <Nothing/> */}
-      {/* <Cards/> */}
     </main>
     </>
   );

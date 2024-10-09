@@ -43,3 +43,51 @@
         }
     }
 }
+
+@media (min-width:$tablet-size) {
+    .buttons{
+        width: 50%;
+        order: 3;
+        padding: 16px 0;
+        background-color: $color11;
+        .container{
+            height: 88px;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            background-color: $color13;
+            width: $tablet;
+            padding: 20px 32px 20px 0;
+            margin: 0 auto 0 0;
+        }
+    }
+    .buttonsDark{
+        background-color: $color12;
+        .container{
+            background-color: $color03;
+        }
+    }
+}
+
+@media (min-width:$desktop-size) {
+    .buttons{
+        width: 50%;
+        order: 3;
+        padding: 16px 0;
+        background-color: $color11;
+        .container{
+            height: 88px;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            background-color: $color13;
+            width: calc($desktop / 2);
+            padding: 20px 32px 20px 0;
+            margin: 0 auto 0 0;
+        }
+    }
+    .buttonsDark{
+        background-color: $color12;
+        .container{
+            background-color: $color03;
+        }
+    }
+}

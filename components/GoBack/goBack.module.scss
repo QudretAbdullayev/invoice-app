@@ -23,6 +23,7 @@
 
 @media (min-width: $tablet-size) {
     .goBack{
+        order: 0;
         .container{
             padding: 49px 0 31px 0;
             width: $tablet;
