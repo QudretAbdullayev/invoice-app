@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header.js";
 import './globals.scss';
 import styles from "./globals.module.scss";
+import Delete from "@/components/ViewInvoice/Delete/Delete.js";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={styles.layout}>
         <Header/>
         {children}
+        <Delete/>
       </body>
     </html>
   );

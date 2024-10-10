@@ -1,5 +1,8 @@
 @import '../app/variables.scss';
 
+.layout{
+    position: relative;
+}
 @media (min-width: $tablet-size) {
     .layout{
         display: flex;

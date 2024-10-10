@@ -15,11 +15,14 @@ export default function Home() {
       <Nothing/>
       <Cards/>
     </main> */}
-    <main className={styles.editPage}>
+    {/* <main className={styles.viewPage}>
       <GoBack/>
       <Status/>
-      <Buttons/>
       <Detail/>
+      <Buttons/>
+    </main> */}
+    <main className={styles.editPage}>
+        <GoBack/>
     </main>
     </>
   );

@@ -1,10 +1,10 @@
 @import '../app/variables.scss';
 @media (min-width:$tablet-size) {
-    .page{
+    .page,.editPage{
         display: flex;
         flex-direction: column;
         flex-grow: 2;
-    }.editPage{
+    }.viewPage{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -13,8 +13,13 @@
 }
 
 @media (min-width: $desktop-size) {
-    .page,.editPage{
+    .page,.viewPage,.editPage{
         height: auto;
         width: calc(100% - 103px);
+        overflow-y: scroll;
+    }
+    .viewPage{
+        position: relative;
+        order: 0;
     }
 }
