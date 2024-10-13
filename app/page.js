@@ -6,6 +6,7 @@ import GoBack from "@/components/GoBack/GoBack";
 import Status from "@/components/ViewInvoice/Status/Status";
 import Buttons from "@/components/ViewInvoice/Buttons/Buttons";
 import Detail from "@/components/ViewInvoice/Detail/Detail";
+import CreateEdit from "@/components/CreateEdit/CreateEdit";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
     </main> */}
     <main className={styles.editPage}>
         <GoBack/>
+        <CreateEdit/>
     </main>
     </>
   );

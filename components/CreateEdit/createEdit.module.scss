@@ -1,2 +1,218 @@
 @import '../../app/mixin.scss';
 @import '../../app/variables.scss';
+
+.createEdit{
+    width: 100%;
+    background-color: $color13;
+    form{
+        width: $mobile;
+        margin: 0 auto;
+        h2{
+            color: $color08;
+            @include font(24px, 700,32px,-0.5px, left);
+            padding-bottom: 22px;
+        }
+        .billFrom{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            h6{
+                color: $color01;
+                @include font(15px, 700,15px, -0.25px, left)
+            }
+            span{
+                display: grid;
+                grid-template-columns: 48% 48%;
+                gap: 4%;
+            }
+            .street,.country,.city,.code{
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+            .street,.country,.city,.code{
+                label{
+                    color: $color07;
+                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                }
+                input{
+                    color: $color08;
+                    @include font(15px, 700,15px,-0.25px, left);
+                    padding: 18px 20px 15px 20px;
+                    border-radius: 1px solid #DFE3FA;
+                    border-radius: 4px;
+                    outline: 1px solid #DFE3FA;
+                }
+            }
+        }
+        .billTo{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 41px 0;
+            h6{
+                color: $color01;
+                @include font(15px, 700,15px, -0.25px, left)
+            }
+            span{
+                display: grid;
+                grid-template-columns: 48% 48%;
+                gap: 4%;
+            }
+            .name,.email,.street,.country,.city,.code{
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+            .name,.email,.street,.country,.city,.code{
+                label{
+                    color: $color07;
+                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                }
+                input{
+                    color: $color08;
+                    @include font(15px, 700,15px,-0.25px, left);
+                    padding: 18px 20px 15px 20px;
+                    border-radius: 1px solid #DFE3FA;
+                    border-radius: 4px;
+                    outline: 1px solid #DFE3FA;
+                }
+            }
+        }
+        .descriptionProject{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .date,.description,.payment{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                label{
+                    color: $color07;
+                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                }
+                input{
+                    width: 100%;
+                    color: $color08;
+                    @include font(15px, 700,15px,-0.25px, left);
+                    padding: 18px 20px 15px 20px;
+                    border-radius: 1px solid #DFE3FA;
+                    border-radius: 4px;
+                    outline: 1px solid #DFE3FA;
+                }
+            }
+            .date{
+                div{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    .dateImage{
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        height: 100%;
+                        top: 0;
+                        right: 20px;
+                        width: $mobile;
+                        margin: 0 auto;
+                        order: 0;
+                    }
+                    input[type="date"]::-webkit-inner-spin-button,
+                    input[type="date"]::-webkit-calendar-picker-indicator {
+                        width: 100%;
+                        background: transparent;
+                        bottom: 0;
+                        color: transparent;
+                        cursor: pointer;
+                        height: auto;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 100%;
+                    }
+                }
+            }
+            .payment{
+                label{
+                    color: $color07;
+                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                }
+                select{
+                    width: 100%;
+                    color: $color08;
+                    @include font(15px, 700,15px,-0.25px, left);
+                    padding: 18px 20px 15px 20px;
+                    border-radius: 1px solid #DFE3FA;
+                    border-radius: 4px;
+                    outline: 1px solid #DFE3FA;
+                }
+            }
+            .description{
+                padding-bottom: 25px;
+            }
+        }
+        .itemList{
+            padding-top: 24px;
+            .item{
+                .itemTitle{
+                    label{
+                        color: $color07;
+                        @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                    }
+                    input{
+                        width: 100%;
+                        color: $color08;
+                        @include font(15px, 700,15px,-0.25px, left);
+                        padding: 18px 20px 15px 20px;
+                        border-radius: 1px solid #DFE3FA;
+                        border-radius: 4px;
+                        outline: 1px solid #DFE3FA;
+                    }
+                }
+                .itemDescription{
+                    padding-top: 25px;
+                    display: grid;
+                    grid-gap: 6%;
+                    width: 100%;
+                    grid-template-columns: 21% 32% 24% 5%;
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
+                        width: 100%;
+                        label{
+                            color: $color07;
+                            @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                        }
+                        input{
+                            width: 100%;
+                            color: $color08;
+                            @include font(15px, 700,15px,-0.25px, left);
+                            padding: 18px 20px 15px 20px;
+                            border-radius: 1px solid #DFE3FA;
+                            border-radius: 4px;
+                            outline: 1px solid #DFE3FA;
+                        }
+                        span{
+                            width: 100%;
+                            color: $color06;
+                            @include font(15px, 700,15px,-0.25px, left);
+                            padding: 18px 0 15px 0;
+                        }
+                    }
+                    :last-child{
+                        align-self: flex-end;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+.createEditDark{
+    width: 100%;
+    background-color: $color12;
+}
