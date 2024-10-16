@@ -5,159 +5,105 @@
     width: 100%;
     background-color: $color13;
     form{
-        width: $mobile;
-        margin: 0 auto;
-        h2{
-            color: $color08;
-            @include font(24px, 700,32px,-0.5px, left);
-            padding-bottom: 22px;
-        }
-        .billFrom{
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            h6{
-                color: $color01;
-                @include font(15px, 700,15px, -0.25px, left)
+        width: 100%;
+        .container{
+            width: $mobile;
+            margin: 0 auto;
+            h2{
+                color: $color08;
+                @include font(24px, 700,32px,-0.5px, left);
+                padding: 11px 0 22px 0;
             }
-            span{
-                display: grid;
-                grid-template-columns: 48% 48%;
-                gap: 4%;
-            }
-            .street,.country,.city,.code{
+            .billFrom{
                 display: flex;
                 flex-direction: column;
-                gap: 9px;
-            }
-            .street,.country,.city,.code{
-                label{
-                    color: $color07;
-                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                gap: 24px;
+                h6{
+                    color: $color01;
+                    @include font(15px, 700,15px, -0.25px, left)
                 }
-                input{
-                    color: $color08;
-                    @include font(15px, 700,15px,-0.25px, left);
-                    padding: 18px 20px 15px 20px;
-                    border-radius: 1px solid #DFE3FA;
-                    border-radius: 4px;
-                    outline: 1px solid #DFE3FA;
-                }
-            }
-        }
-        .billTo{
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            padding: 41px 0;
-            h6{
-                color: $color01;
-                @include font(15px, 700,15px, -0.25px, left)
-            }
-            span{
-                display: grid;
-                grid-template-columns: 48% 48%;
-                gap: 4%;
-            }
-            .name,.email,.street,.country,.city,.code{
-                display: flex;
-                flex-direction: column;
-                gap: 9px;
-            }
-            .name,.email,.street,.country,.city,.code{
-                label{
-                    color: $color07;
-                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
-                }
-                input{
-                    color: $color08;
-                    @include font(15px, 700,15px,-0.25px, left);
-                    padding: 18px 20px 15px 20px;
-                    border-radius: 1px solid #DFE3FA;
-                    border-radius: 4px;
-                    outline: 1px solid #DFE3FA;
-                }
-            }
-        }
-        .descriptionProject{
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            .date,.description,.payment{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 9px;
-                label{
-                    color: $color07;
-                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
-                }
-                input{
-                    width: 100%;
-                    color: $color08;
-                    @include font(15px, 700,15px,-0.25px, left);
-                    padding: 18px 20px 15px 20px;
-                    border-radius: 1px solid #DFE3FA;
-                    border-radius: 4px;
-                    outline: 1px solid #DFE3FA;
-                }
-            }
-            .date{
-                div{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    .dateImage{
-                        position: absolute;
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-                        height: 100%;
-                        top: 0;
-                        right: 20px;
-                        width: $mobile;
-                        margin: 0 auto;
-                        order: 0;
+                span{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    row-gap: 23px;
+                    .city, .code{
+                        width: 48%;
                     }
-                    input[type="date"]::-webkit-inner-spin-button,
-                    input[type="date"]::-webkit-calendar-picker-indicator {
-                        width: 100%;
-                        background: transparent;
-                        bottom: 0;
-                        color: transparent;
-                        cursor: pointer;
-                        height: auto;
-                        left: 0;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
+                    .country{
                         width: 100%;
                     }
                 }
-            }
-            .payment{
-                label{
-                    color: $color07;
-                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                .street,.country,.city,.code{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
                 }
-                select{
+                .street,.country,.city,.code{
+                    label{
+                        color: $color07;
+                        @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                    }
+                    input{
+                        color: $color08;
+                        @include font(15px, 700,15px,-0.25px, left);
+                        padding: 18px 20px 15px 20px;
+                        border: 1px solid #DFE3FA;
+                        border-radius: 4px;
+                        outline: none;
+                    }
+                }
+            }
+            .billTo{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 41px 0;
+                h6{
+                    color: $color01;
+                    @include font(15px, 700,15px, -0.25px, left)
+                }
+                span{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    row-gap: 23px;
+                    .city, .code{
+                        width: 48%;
+                    }
+                    .country{
+                        width: 100%;
+                    }
+                }
+                .name,.email,.street,.country,.city,.code{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                }
+                .name,.email,.street,.country,.city,.code{
+                    label{
+                        color: $color07;
+                        @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                    }
+                    input{
+                        color: $color08;
+                        @include font(15px, 700,15px,-0.25px, left);
+                        padding: 18px 20px 15px 20px;
+                        border: 1px solid #DFE3FA;
+                        border-radius: 4px;
+                        outline: none;
+                    }
+                }
+            }
+            .descriptionProject{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .date,.description,.payment{
                     width: 100%;
-                    color: $color08;
-                    @include font(15px, 700,15px,-0.25px, left);
-                    padding: 18px 20px 15px 20px;
-                    border-radius: 1px solid #DFE3FA;
-                    border-radius: 4px;
-                    outline: 1px solid #DFE3FA;
-                }
-            }
-            .description{
-                padding-bottom: 25px;
-            }
-        }
-        .itemList{
-            padding-top: 24px;
-            .item{
-                .itemTitle{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
                     label{
                         color: $color07;
                         @include font(13px, 500, 15px,-0.10000000149011612px, left)
@@ -167,22 +113,71 @@
                         color: $color08;
                         @include font(15px, 700,15px,-0.25px, left);
                         padding: 18px 20px 15px 20px;
-                        border-radius: 1px solid #DFE3FA;
+                        border: 1px solid #DFE3FA;
                         border-radius: 4px;
-                        outline: 1px solid #DFE3FA;
+                        outline: none;
                     }
                 }
-                .itemDescription{
-                    padding-top: 25px;
-                    display: grid;
-                    grid-gap: 6%;
-                    width: 100%;
-                    grid-template-columns: 21% 32% 24% 5%;
+                .date{
+                    overflow: hidden;
+                    input{
+                        padding: 18px 13px 15px 20px;
+                    }
                     div{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 9px;
+                        position: relative;
                         width: 100%;
+                        height: 100%;
+                        .dateImage{
+                            width: 16px;
+                            height: 80%;
+                            background-color: $color13;
+                            pointer-events: none;
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            top: 6px;
+                            right: 16px;
+                            margin: 0 auto;
+                            order: 0;
+                        }
+                    }
+                }
+                .payment{
+                    label{
+                        color: $color07;
+                        @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                    }
+                    .select{
+                        position: relative;
+                        select{
+                            width: 100%;
+                            color: $color08;
+                            @include font(15px, 700,15px,-0.25px, left);
+                            padding: 18px 20px 15px 20px;
+                            border: 1px solid #DFE3FA;
+                            border-radius: 4px;
+                            outline: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+                        img{
+                            position: absolute;
+                            top: 21px;
+                            right: 16px;
+                            pointer-events: none;
+                        }
+                    }
+                }
+                .description{
+                    padding-bottom: 25px;
+                }
+            }
+            .itemList{
+                padding-top: 24px;
+                .item{
+                    .itemTitle{
                         label{
                             color: $color07;
                             @include font(13px, 500, 15px,-0.10000000149011612px, left)
@@ -192,27 +187,373 @@
                             color: $color08;
                             @include font(15px, 700,15px,-0.25px, left);
                             padding: 18px 20px 15px 20px;
-                            border-radius: 1px solid #DFE3FA;
+                            border: 1px solid #DFE3FA;
                             border-radius: 4px;
-                            outline: 1px solid #DFE3FA;
+                            outline: none;
                         }
-                        span{
+                    }
+                    .itemDescription{
+                        padding-top: 25px;
+                        display: grid;
+                        grid-gap: 6%;
+                        width: 100%;
+                        grid-template-columns: 21% 32% 24% 5%;
+                        div{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 9px;
                             width: 100%;
-                            color: $color06;
-                            @include font(15px, 700,15px,-0.25px, left);
-                            padding: 18px 0 15px 0;
+                            label{
+                                color: $color07;
+                                @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                            }
+                            input{
+                                width: 100%;
+                                color: $color08;
+                                @include font(15px, 700,15px,-0.25px, left);
+                                padding: 18px 20px 15px 20px;
+                                border: 1px solid #DFE3FA;
+                                border-radius: 4px;
+                                outline: none;
+                            }
+                            span{
+                                width: 100%;
+                                color: $color06;
+                                @include font(15px, 700,15px,-0.25px, left);
+                                padding: 18px 0 15px 0;
+                            }
+                        }
+                        :last-child{
+                            align-self: flex-end;
+                            margin-bottom: 16px;
                         }
                     }
-                    :last-child{
-                        align-self: flex-end;
-                        margin-bottom: 16px;
-                    }
+                }
+            }
+            button{
+                margin: 48px 0 24px 0;
+                background-color: $color15;
+                color: $color07;
+                border: none;
+                border-radius: 24px;
+                padding: 18px 0 15px 0;
+                width: 100%;
+                @include font(15px,700,15px,-0.25px,center);
+            }
+        }
+        .containerFooter{
+            width: 100%;
+            .box{
+                width: 100%;
+                height: 64px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+            }
+            .box1{
+                width: $mobile;
+                margin: 0 auto;
+                height: 91px;
+                background-color: $color13;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+                button{
+                    @include font(15px,700,15px, -0.25px,center);
+                    height: 48px;
+                    border-radius: 24px;
+                    border: none;
+                    display: none;
+                    padding: 18px 15px 15px 15px;
+                }
+                .buttonActive{
+                    display: block;
+                }
+                :first-child{
+                    background-color: $color15;
+                    color: $color07;
+                }
+                :nth-child(2){
+                    background-color: $color15;
+                    color: $color07;
+                }
+                :nth-child(3){
+                    background-color: $color16;
+                    color: $color06;
+                }
+                :last-child{
+                    background-color: $color01;
+                    color: $color13;
                 }
             }
         }
     }
 }
 .createEditDark{
-    width: 100%;
     background-color: $color12;
+    form{
+        .container{
+            h2{
+                color: $color13;
+            }
+            .billFrom{
+                .street,.country,.city,.code{
+                    label{
+                        color: $color06;
+                    }
+                    input{
+                        color: $color13;
+                        border: 1px solid $color04;
+                        background-color: $color03;
+                    }
+                    ::placeholder{
+                        color: $color13;
+                    }
+                }
+            }
+            .billTo{
+                .name,.email,.street,.country,.city,.code{
+                    label{
+                        color: $color06;
+                    }
+                    input{
+                        color: $color13;
+                        border: 1px solid $color04;
+                        background-color: $color03;
+                    }
+                    ::placeholder{
+                        color: $color13;
+                    }
+                }
+            }
+            .descriptionProject{
+                .date,.description,.payment{
+                    label{
+                        color: $color06;
+                    }
+                    input{
+                        color: $color13;
+                        border: 1px solid $color04;
+                        background-color: $color03;
+                    }
+                    ::placeholder{
+                        color: $color13;
+                    }
+                }
+                .date{
+                    div{
+                        .dateImage{
+                            background-color: $color03;
+                        }
+                    }
+                }
+                .payment{
+                    label{
+                        color: $color06;
+                    }
+                    .select{
+                        select{
+                            color: $color13;
+                            border: 1px solid $color04;
+                            background-color: $color03;
+
+                        }
+                    }
+                }
+            }
+            .itemList{
+                .item{
+                    .itemTitle{
+                        input{
+                            color: $color13;
+                            border: 1px solid $color04;
+                            background-color: $color03;
+                        }
+                        ::placeholder{
+                            color: $color13;
+                        }
+                    }
+                    .itemDescription{
+                        div{
+                            label{
+                                color: $color06;
+                            }
+                            input{
+                                color: $color13;
+                                border: 1px solid $color04;
+                                background-color: $color03;
+                            }
+                            span{
+                                color: $color06;
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                background-color: $color04;
+                color: $color06;
+            }
+        }
+        .containerFooter{
+            background-color: $color03;
+            .box{
+                background: $color12;
+            }
+            .box1{
+                background-color: $color03;
+                :first-child{
+                    background-color: $color04;
+                    color: $color05;
+                }
+                :nth-child(2){
+                    background-color: $color04;
+                    color: $color05;
+                }
+                :nth-child(3){
+                    color: $color05;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$tablet-size) {
+    .createEdit{
+        width: $tablet-show;
+        form{
+            .container{
+                width: $tablet-show-margin;
+                h2{
+                    padding: 59px 0 46px 0;
+                }
+                .billFrom{
+                    h6,.street{
+                        width: 100%;
+                    }
+                    span{
+                        display: flex;
+                        justify-content: space-between;
+                        .city,.code,.country{
+                            width: 31.5%;
+                        }
+                    }
+                }
+                .billTo{
+                    padding: 49px 0;
+                    h6,.name,.email,.street{
+                        width: 100%;
+                    }
+                    span{
+                        display: flex;
+                        justify-content: space-between;
+                        .city,.code,.country{
+                            width: 31.5%;
+                        }
+                    }
+                }
+                .descriptionProject{
+                    flex-direction: column;
+                    gap: 24px;
+                    .date,.description,.payment{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
+                    }
+                }
+                .itemList{
+                    padding-top: 24px;
+                    .item{
+                        .itemTitle{
+                            label{
+                                color: $color07;
+                                @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                            }
+                            input{
+                                width: 100%;
+                                color: $color08;
+                                @include font(15px, 700,15px,-0.25px, left);
+                                padding: 18px 20px 15px 20px;
+                                border: 1px solid #DFE3FA;
+                                border-radius: 4px;
+                                outline: none;
+                            }
+                        }
+                        .itemDescription{
+                            padding-top: 25px;
+                            display: grid;
+                            grid-gap: 6%;
+                            width: 100%;
+                            grid-template-columns: 21% 32% 24% 5%;
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 9px;
+                                width: 100%;
+                                label{
+                                    color: $color07;
+                                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                                }
+                                input{
+                                    width: 100%;
+                                    color: $color08;
+                                    @include font(15px, 700,15px,-0.25px, left);
+                                    padding: 18px 20px 15px 20px;
+                                    border: 1px solid #DFE3FA;
+                                    border-radius: 4px;
+                                    outline: none;
+                                }
+                                span{
+                                    width: 100%;
+                                    color: $color06;
+                                    @include font(15px, 700,15px,-0.25px, left);
+                                    padding: 18px 0 15px 0;
+                                }
+                            }
+                            :last-child{
+                                align-self: flex-end;
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+                button{
+                    margin: 48px 0 24px 0;
+                    background-color: $color15;
+                    color: $color07;
+                    border: none;
+                    border-radius: 24px;
+                    padding: 18px 0 15px 0;
+                    width: 100%;
+                    @include font(15px,700,15px,-0.25px,center);
+                }
+            }
+            .containerFooter{
+                width: 100%;
+                .box{
+                    width: 100%;
+                    height: 64px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+                }
+                .box1{
+                    width: $mobile;
+                    margin: 0 auto;
+                    height: 91px;
+                    background-color: $color13;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    button{
+                        @include font(15px,700,15px, -0.25px,center);
+                        height: 48px;
+                        border-radius: 24px;
+                        border: none;
+                        display: none;
+                        padding: 18px 15px 15px 15px;
+                    }
+                }
+            }
+        }
+    }
 }
