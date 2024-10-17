@@ -111,29 +111,28 @@ const CreateEdit = () => {
               </div>
             </div>
             <div className={styles.itemList}>
+              <h4>Item List</h4>
               <div className={styles.item}>
                 <div className={styles.itemTitle}>
                   <label>Item Name</label>
                   <input placeholder='Item Name' type="text" name="item-name"/>
                 </div>
-                <div className={styles.itemDescription}>
-                  <div>
-                    <label>Qty.</label>
-                    <input defaultValue={count} type="number" />
-                  </div>
-                  <div>
-                    <label>Price</label>
-                    <input placeholder='Price' defaultValue={price.toFixed(2)} type="number" />
-                  </div>
-                  <div>
-                    <label>Total</label>
-                    <span>{(total).toFixed(2)}</span>
-                  </div>
-                  <div>
-                    <Image
-                    src={basket}
-                    alt={'basket'}/>
-                  </div>
+                <div className={styles.qty}>
+                  <label>Qty.</label>
+                  <input defaultValue={count} type="number" />
+                </div>
+                <div className={styles.price}>
+                  <label>Price</label>
+                  <input placeholder='Price' defaultValue={price.toFixed(2)} type="number" />
+                </div>
+                <div className={styles.total}>
+                  <label>Total</label>
+                  <span>{(total).toFixed(2)}</span>
+                </div>
+                <div className={styles.basket}>
+                  <Image
+                  src={basket}
+                  alt={'basket'}/>
                 </div>
                 <div className={styles.itemAddButton}></div>
               </div>

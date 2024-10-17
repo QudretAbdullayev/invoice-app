@@ -175,9 +175,38 @@
                 }
             }
             .itemList{
-                padding-top: 24px;
+                padding-top: 44px;
+                h4{
+                    color: $color17;
+                    @include font(18px,700,32px,-0.375px,left);
+                    padding-bottom: 22px;
+                }
                 .item{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    column-gap: 6%;
                     .itemTitle{
+                        width: 42%;
+                        label{
+                            color: $color07;
+                            @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                        }
+                        input{
+                            margin: 15px 0 25px 0;
+                            width: 100%;
+                            color: $color08;
+                            @include font(15px, 700,15px,-0.25px, left);
+                            padding: 18px 20px 15px 20px;
+                            border: 1px solid #DFE3FA;
+                            border-radius: 4px;
+                            outline: none;
+                        }
+                    }
+                    .qty,.price,.total,.basket{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
                         label{
                             color: $color07;
                             @include font(13px, 500, 15px,-0.10000000149011612px, left)
@@ -191,42 +220,34 @@
                             border-radius: 4px;
                             outline: none;
                         }
-                    }
-                    .itemDescription{
-                        padding-top: 25px;
-                        display: grid;
-                        grid-gap: 6%;
-                        width: 100%;
-                        grid-template-columns: 21% 32% 24% 5%;
-                        div{
-                            display: flex;
-                            flex-direction: column;
-                            gap: 9px;
+                        input[type=number] {
+                            -moz-appearance: textfield;
+                        }
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        span{
                             width: 100%;
-                            label{
-                                color: $color07;
-                                @include font(13px, 500, 15px,-0.10000000149011612px, left)
-                            }
-                            input{
-                                width: 100%;
-                                color: $color08;
-                                @include font(15px, 700,15px,-0.25px, left);
-                                padding: 18px 20px 15px 20px;
-                                border: 1px solid #DFE3FA;
-                                border-radius: 4px;
-                                outline: none;
-                            }
-                            span{
-                                width: 100%;
-                                color: $color06;
-                                @include font(15px, 700,15px,-0.25px, left);
-                                padding: 18px 0 15px 0;
-                            }
+                            color: $color06;
+                            @include font(15px, 700,15px,-0.25px, left);
+                            padding: 18px 0 15px 0;
                         }
-                        :last-child{
-                            align-self: flex-end;
-                            margin-bottom: 16px;
-                        }
+                    }
+                    .qty{
+                        width: 21%;
+                    }
+                    .price{
+                        width: 32%;
+                    }
+                    .total{
+                        width: 24%;
+                    }
+                    .basket{
+                        width: 5%;
+                        align-self: flex-end;
+                        margin-bottom: 16px;
                     }
                 }
             }
@@ -363,6 +384,9 @@
             .itemList{
                 .item{
                     .itemTitle{
+                        label{
+                            color: $color06;
+                        }
                         input{
                             color: $color13;
                             border: 1px solid $color04;
@@ -372,19 +396,20 @@
                             color: $color13;
                         }
                     }
-                    .itemDescription{
-                        div{
-                            label{
-                                color: $color06;
-                            }
-                            input{
-                                color: $color13;
-                                border: 1px solid $color04;
-                                background-color: $color03;
-                            }
-                            span{
-                                color: $color06;
-                            }
+                    .qty,.price,.total,.basket{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 9px;
+                        label{
+                            color: $color06;
+                        }
+                        input{
+                            color: $color13;
+                            border: 1px solid $color04;
+                            background-color: $color03;
+                        }
+                        ::placeholder{
+                            color: $color13;
                         }
                     }
                 }
@@ -462,67 +487,64 @@
                     }
                 }
                 .itemList{
-                    padding-top: 24px;
+                    padding-top: 44px;
+                    h4{
+                        @include font(18px,700,32px,-0.375px,left);
+                        padding-bottom: 22px;
+                    }
                     .item{
+                        display: flex;
+                        flex-wrap: wrap;
+                        column-gap: 6%;
                         .itemTitle{
+                            width: 100%;
                             label{
-                                color: $color07;
+                                @include font(13px, 500, 15px,-0.10000000149011612px, left)
+                            }
+                            input{
+                                margin: 15px 0 25px 0;
+                                width: 100%;
+                                @include font(15px, 700,15px,-0.25px, left);
+                                padding: 18px 20px 15px 20px;
+                            }
+                        }
+                        .qty,.price,.total,.basket{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 9px;
+                            width: 100%;
+                            label{
                                 @include font(13px, 500, 15px,-0.10000000149011612px, left)
                             }
                             input{
                                 width: 100%;
-                                color: $color08;
                                 @include font(15px, 700,15px,-0.25px, left);
                                 padding: 18px 20px 15px 20px;
-                                border: 1px solid #DFE3FA;
-                                border-radius: 4px;
-                                outline: none;
+                            }
+                            span{
+                                width: 100%;
+                                @include font(15px, 700,15px,-0.25px, left);
+                                padding: 18px 0 15px 0;
                             }
                         }
-                        .itemDescription{
-                            padding-top: 25px;
-                            display: grid;
-                            grid-gap: 6%;
-                            width: 100%;
-                            grid-template-columns: 21% 32% 24% 5%;
-                            div{
-                                display: flex;
-                                flex-direction: column;
-                                gap: 9px;
-                                width: 100%;
-                                label{
-                                    color: $color07;
-                                    @include font(13px, 500, 15px,-0.10000000149011612px, left)
-                                }
-                                input{
-                                    width: 100%;
-                                    color: $color08;
-                                    @include font(15px, 700,15px,-0.25px, left);
-                                    padding: 18px 20px 15px 20px;
-                                    border: 1px solid #DFE3FA;
-                                    border-radius: 4px;
-                                    outline: none;
-                                }
-                                span{
-                                    width: 100%;
-                                    color: $color06;
-                                    @include font(15px, 700,15px,-0.25px, left);
-                                    padding: 18px 0 15px 0;
-                                }
-                            }
-                            :last-child{
-                                align-self: flex-end;
-                                margin-bottom: 16px;
-                            }
+                        .qty{
+                            width: 21%;
+                        }
+                        .price{
+                            width: 32%;
+                        }
+                        .total{
+                            width: 24%;
+                        }
+                        .basket{
+                            width: 5%;
+                            align-self: flex-end;
+                            margin-bottom: 16px;
                         }
                     }
                 }
                 button{
                     margin: 48px 0 24px 0;
-                    background-color: $color15;
-                    color: $color07;
-                    border: none;
-                    border-radius: 24px;
                     padding: 18px 0 15px 0;
                     width: 100%;
                     @include font(15px,700,15px,-0.25px,center);
