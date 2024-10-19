@@ -11,21 +11,21 @@ import CreateEdit from "@/components/CreateEdit/CreateEdit";
 export default function Home() {
   return (
     <>
-    {/* <main className={styles.page}>
+    <main className={styles.page}>
       <Filter/>
       <Nothing/>
-      <Cards/>
-    </main> */}
+      {/* <Cards/> */}
+    </main>
     {/* <main className={styles.viewPage}>
       <GoBack/>
       <Status/>
       <Detail/>
       <Buttons/>
     </main> */}
-    <main className={styles.editPage}>
+    {/* <main className={styles.editPage}>
         <GoBack/>
         <CreateEdit/>
-    </main>
+    </main> */}
     </>
   );
 }
